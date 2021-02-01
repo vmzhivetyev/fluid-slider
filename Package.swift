@@ -29,15 +29,19 @@ import PackageDescription
 let package = Package(
     name: "FluidSlider",
     platforms: [
-        .iOS(.v10)
+        .iOS(.v11)
     ],
     products: [
         .library(name: "FluidSlider",
             targets: ["FluidSlider"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/vmzhivetyev/pop-spm-package.git", from: "1.0.3"),
+    ],
     targets: [
         .target(name: "FluidSlider",
-            path: "Sources")
+                dependencies: [ .product(name: "pop") ],
+                path: "Sources")
     ],
     swiftLanguageVersions: [.v5]
 )
