@@ -36,7 +36,7 @@ let package = Package(
             targets: ["FluidSlider"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/vmzhivetyev/pop-spm-package.git", from: "1.0.3"),
+        .package(url: "https://github.com/vmzhivetyev/pop-spm-package.git", from: "1.0.4"),
     ],
     targets: [
         .target(name: "FluidSlider",
